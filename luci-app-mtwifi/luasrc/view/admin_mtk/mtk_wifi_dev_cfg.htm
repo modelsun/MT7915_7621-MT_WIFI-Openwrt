@@ -84,7 +84,7 @@ if next(diff) ~= nil then
                 <td></td>
             </tr>
             <tr>
-                <td>Country Region</td>
+                <td>Country Region[国家区域]</td>
                 <td>
                     <select style="width:auto; min-width:180px;" name="__cr" id="__cr" onchange="CountryRegion_onchange(this.value)">
                     </select>
@@ -105,7 +105,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.HT_GI then %>
             <tr>
-                <td>HT Guard Interval</td>
+                <td>HT Guard Interval[HT保护间隔]</td>
                 <td>
                     <select style="width:auto" name="HT_GI">
                         <option value="0" <% if cfgs.HT_GI == "0" then %> selected="selected"<% end%>>Long</option>
@@ -150,7 +150,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.HT_STBC then %>
             <tr>
-                <td>STBC</td>
+                <td>STBC[空时分组码]</td>
                 <td>
                     <input type="radio" name="HT_STBC" value="1" <% if cfgs.HT_STBC == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="HT_STBC" value="0" <% if cfgs.HT_STBC == "0" then %> checked="checked"<% end %>/> 禁用
@@ -160,7 +160,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.HT_AMSDU then %>
             <tr>
-                <td>A-MSDU</td>
+                <td>A-MSDU[MSDU聚合]</td>
                 <td>
                     <input type="radio" name="HT_AMSDU" value="1" <% if cfgs.HT_AMSDU == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="HT_AMSDU" value="0" <% if cfgs.HT_AMSDU == "0" then %> checked="checked"<% end %>/> 禁用
@@ -190,7 +190,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.HT_DisallowTKIP then %>
             <tr>
-                <td>HT Disallow TKIP</td>
+                <td>HT Disallow TKIP[HT禁用TKIP]</td>
                 <td>
                     <input type="radio" name="HT_DisallowTKIP" value="1" <% if cfgs.HT_DisallowTKIP == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="HT_DisallowTKIP" value="0" <% if cfgs.HT_DisallowTKIP == "0" then %> checked="checked"<% end %>/> 禁用
@@ -210,7 +210,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.VHT_SGI then %>
             <tr>
-                <td>VHT Short GI</td>
+                <td>VHT Short GI[VHT短保护间隔]</td>
                 <td>
                     <select style="width:auto" name="VHT_SGI">
                         <option value="0" <% if cfgs.VHT_SGI == "0" then %> selected="selected"<% end%>>Long</option>
@@ -222,7 +222,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.VHT_STBC then %>
             <tr>
-                <td>VHT STBC</td>
+                <td>VHT STBC[VHT空时分组码]</td>
                 <td>
                     <input type="radio" name="VHT_STBC" value="1" <% if cfgs.VHT_STBC == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="VHT_STBC" value="0" <% if cfgs.VHT_STBC == "0" then %> checked="checked"<% end %>/> 禁用
@@ -236,7 +236,7 @@ if next(diff) ~= nil then
                 <td>
                     <input type="radio" name="VHT_BW_SIGNAL" value="1" <% if cfgs.VHT_BW_SIGNAL == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="VHT_BW_SIGNAL" value="0" <% if cfgs.VHT_BW_SIGNAL == "0" then %> checked="checked"<% end %>/> 禁用
-                    <input type="radio" name="VHT_BW_SIGNAL" value="0" <% if cfgs.VHT_BW_SIGNAL == "2" then %> checked="checked"<% end %>/> Dynamic
+                    <input type="radio" name="VHT_BW_SIGNAL" value="2" <% if cfgs.VHT_BW_SIGNAL == "2" then %> checked="checked"<% end %>/> Dynamic
                 </td>
                 <td></td>
             </tr>
@@ -253,7 +253,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.BGProtection then %>
             <tr>
-                <td>BG Protection Mode</td>
+                <td>BG Protection Mode[BG保护模式]</td>
                 <td>
                     <select name="BGProtection" style="width:auto">
                         <option value="0" <% if cfgs.BGProtection == "0" then %>selected="selected"<% end %>>Auto</option>
@@ -266,7 +266,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.VHT_BW then %>
             <tr>
-                <td>HT Protection</td>
+                <td>HT Protection[HT保护]</td>
                 <td>
                     <input type="radio" name="HT_PROTECT" value="1" <% if cfgs.HT_PROTECT == "1" then %> checked="checked"<% end %>/> 启用
                     <input type="radio" name="HT_PROTECT" value="0" <% if cfgs.HT_PROTECT == "0" then %> checked="checked"<% end %>/> 禁用
@@ -312,7 +312,7 @@ if next(diff) ~= nil then
             <% end %>
             <% if cfgs.TxPower then %>
             <tr>
-                <td>TX Power</td>
+                <td>TX Power[发射功率]</td>
                 <td>
                     <input name="TxPower" value="<%=cfgs.TxPower%>" />dbm(范围 1-100, 默认值 100)
                 </td>
